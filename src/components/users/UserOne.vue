@@ -24,9 +24,11 @@ export default {
     },
     methods: {
         reducePrice() {
-            this.$store.state.users.forEach(user => {
+            /*this.$store.state.users.forEach(user => {
                 user.price -= 1;
-            })
+            })*/
+
+            this.$store.commit('reducePrice');
         }
     }
 }
