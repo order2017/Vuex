@@ -28,9 +28,11 @@ export const store = new Vuex.Store({
     // 触发事件改变数据
     mutations: {
         reducePrice: state => {
-            state.users.forEach(user => {
-                user.price -= 1;
-            })
+            setTimeout(function () {
+                state.users.forEach(user => {
+                    user.price -= 1;
+                })
+            },3000);
         }
     }
 });
