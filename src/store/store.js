@@ -14,7 +14,7 @@ export const store = new Vuex.Store({
 
     // 获取数据
     getters: {
-        saleUse(state) {
+        saleUsers(state) {
             var saleUser = state.users.map(user => {
                 return {
                     name: "**" + user.name + "**",

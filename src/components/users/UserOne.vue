@@ -12,26 +12,22 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
+  import {mapActions} from 'vuex'
 export default {
     name: 'UserOne',
     computed: {
         users() {
             return this.$store.state.users;
         },
-        saleUsers() {
-            return this.$store.getters.saleUse
-        }
+        ...mapGetters([
+            'saleUsers'
+        ])
     },
     methods: {
-        reducePrice(amount) {
-            /*this.$store.state.users.forEach(user => {
-                user.price -= 1;
-            })*/
-
-           // this.$store.commit('reducePrice');
-
-            this.$store.dispatch('reducePrice',amount);
-        }
+        ...mapActions([
+            'reducePrice'
+        ])
     }
 }
 </script>
