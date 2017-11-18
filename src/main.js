@@ -10,9 +10,13 @@ Vue.config.productionTip = false
 Vue.use(Vuex)
 
 /* eslint-disable no-new */
+
+import {store} from './store/store'
+
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

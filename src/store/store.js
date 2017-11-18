@@ -3,6 +3,11 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
-
+export const store = new Vuex.Store({
+    state: {
+        users: [
+            { name: '陈小龙', age: 29 },
+            { name: '陈占译', age: 3 }
+        ]
+    }
 });
