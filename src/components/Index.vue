@@ -2,12 +2,20 @@
   <div class="index">
     <product-one v-bind:users="users"></product-one>
     <product-two v-bind:users="users"></product-two>
+    <br>
+    <user-one></user-one>
+    <user-two></user-two>
   </div>
 </template>
 
 <script>
+  // props 属性方法
   import ProductOne from './pages/ProductOne'
   import ProductTwo from './pages/ProductTwo'
+
+  // vuex 状态管理
+  import UserOne from './users/UserOne'
+  import UserTwo from './users/UserTwo'
   export default {
       name: 'Index',
       data() {
@@ -20,7 +28,9 @@
       },
       components: {
           ProductOne,
-          ProductTwo
+          ProductTwo,
+          UserOne,
+          UserTwo
       }
   }
 </script>

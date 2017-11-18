@@ -4,6 +4,9 @@ import Index from '@/components/Index'
 import ProductOne from '@/components/pages/ProductOne'
 import ProductTwo from '@/components/pages/ProductTwo'
 
+import UserOne from '@/components/users/UserOne'
+import UserTwo from '@/components/users/UserTwo'
+
 Vue.use(Router)
 
 export default new Router({
@@ -22,6 +25,16 @@ export default new Router({
           path: '/two',
           name: 'ProductTwo',
           component: ProductTwo
+      },
+      {
+          path: '/user-one',
+          name: 'UserOne',
+          component: UserOne
+      },
+      {
+          path: '/user-two',
+          name: 'UserTwo',
+          component: UserTwo
       }
   ]
 })
