@@ -2,7 +2,7 @@
   <div class="userone">
     <h3>Vuex第一个组件</h3>
     <ul class="list-group">
-      <li class="list-group-item" v-for="user in users">姓名：{{ user.name }} 年龄：{{ user.age }}</li>
+      <li class="list-group-item" v-for="user in saleUsers">姓名：{{ user.name }} 年龄：{{ user.age }} 价格：{{ user.price }}</li>
     </ul>
   </div>
 </template>
@@ -13,6 +13,15 @@ export default {
     computed: {
         users() {
             return this.$store.state.users;
+        },
+        saleUsers() {
+            var saleUser = this.$store.state.users.map(user => {
+                return {
+                    name: "**" + user.name + "**",
+                    price: user.price / 2
+                };
+            });
+            return saleUser;
         }
     }
 }
