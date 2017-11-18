@@ -28,11 +28,19 @@ export const store = new Vuex.Store({
     // 触发事件改变数据
     mutations: {
         reducePrice: state => {
-            setTimeout(function () {
+           // setTimeout(function () {
                 state.users.forEach(user => {
                     user.price -= 1;
                 })
-            },3000);
+           // },3000);
+        }
+    },
+
+    actions: {
+        reducePrice:(context) => {
+            setTimeout(function () {
+                context.commit('reducePrice');
+            },2000);
         }
     }
 });

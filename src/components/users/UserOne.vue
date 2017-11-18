@@ -28,7 +28,9 @@ export default {
                 user.price -= 1;
             })*/
 
-            this.$store.commit('reducePrice');
+           // this.$store.commit('reducePrice');
+
+            this.$store.dispatch('reducePrice');
         }
     }
 }
